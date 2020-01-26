@@ -1,0 +1,27 @@
+<form class="display-form">
+{{!-- for the ones that were not devoured --}}
+	{{#unless devoured}}
+	<li>
+		<textarea class="form-control" rows="4" cols="30" readonly id="burger_name">
+		                {{burger_name}}
+	       </textarea>
+
+		<button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
+			Devour it!
+		</button>
+
+	</li>
+	{{/unless}}
+	
+{{!-- for the ones that were devoured --}}
+	{{#if devoured}}
+	<li>
+
+		<textarea class="form-control" rows="3" cols="30" readonly id="burger_name">
+		                {{burger_name}}
+	       </textarea>
+
+	</li>
+	{{/if}}
+
+</form>
